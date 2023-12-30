@@ -53,7 +53,7 @@ const useUsers = () =>
   useQuery<User[]>({
     queryKey: ["users"],
     queryFn: () => axios.get("/api/users").then((res) => res.data),
-    staleTime: 60 * 10000, // 60 minutes
+    staleTime: 60 * 1000, // 6 minutes
     retry: 3,
   });
 
