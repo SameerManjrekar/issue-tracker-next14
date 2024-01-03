@@ -39,7 +39,7 @@ const IssuePage = async ({ searchParams }: IssuePageProps) => {
     take: pageSize,
   });
 
-  const issueCount = await prisma.issue.count({
+  const issueCount = await prisma?.issue?.count({
     where: { status: validStatus },
   });
 
